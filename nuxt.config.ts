@@ -90,4 +90,13 @@ export default defineNuxtConfig({
       }
     }
   },
+
+  ssr: false, 
+  nitro : {
+    preset : 'github-pages' 
+  },
+  app : {
+    baseURL : '/rejoiceee.github.io/',
+    buildAssetsDir: 'assets'
+  }
 })
