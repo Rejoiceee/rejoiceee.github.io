@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+@import "variable";
+@import "mixin";
+
+//px,rem 변환
+@function setSize($num) {
+  @if $platform != 'mobile' { // pc인 경우
+    @return #{$num * $fontSize + ($num * $fontSize * $scale)}px;
+  } @else { // rem
+      @return #{$num}rem;
+  }
+}
+
