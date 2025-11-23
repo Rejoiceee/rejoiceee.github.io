@@ -37,5 +37,3 @@ textarea { appearance: none; -webkit-appearance: none; -webkit-border-radius: 0;
 h1, h2, h3, h4, h5, h6 { font-size: 100%; }
 
 body, input, textarea, select, button, table, h1, h2, h3, h4, h5, h6 { font-family: -apple-system-font,'Apple SD Gothic Neo',Helvetica,sans-serif; letter-spacing: -0.05rem; }
-
-/*# sourceMappingURL=reset.css.map */

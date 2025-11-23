@@ -1,13 +1,9 @@
-import { fileURLToPath } from 'url'
-
-const setAlias = (path: string) => {
-  return fileURLToPath(new URL(path, import.meta.url))
-}
+import { resolve } from 'pathe'
 
 export default defineNuxtConfig({
   alias: {
-    images: setAlias('./assets/images'),
-    styles: setAlias('./assets/styles')
+    images: resolve('./assets/images'),
+    styles: resolve('./assets/styles')
   },
   compatibilityDate: '2025-05-15',
   app: {
@@ -57,6 +53,10 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
+          additionalData: `
+          @use "styles/common/variable" as *;
+          @use "styles/common/mixin" as *;
+        `,
           verbose: true,
           logger: {
             warn(message: string, options: any) {

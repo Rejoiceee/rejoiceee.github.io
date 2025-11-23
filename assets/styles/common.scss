@@ -1,8 +1,7 @@
 @charset "utf-8";
 
-@import "common/common";
-//@import "common/variable";
+@use "common/common";
+@use "common/variable";
+@use "common/mixin";
 
-body {
-    div {background:#f0f;}
-}
+@import "reset.css";
